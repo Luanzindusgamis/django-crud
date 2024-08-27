@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualiza gostosa</title>
+</head>
+<body>
+    <form action="{% url 'update' %}" method = "post">
+        {% csrf_token %}
+        <label for="">Id</label>
+        <input type ="text" name= "id" value="{{produto.id}}" readonly><br> 
+        <label for = ""> Descrição</label>
+        <input type= "text" name = "descricao" value="{{produto.descricao}}"><br>
+        <label for = ""> Preço</label>
+        <input type= "text" name = "preco" value="{{produto.preco}}"><br>
+        <label for=""> Quantidade</label>
+        <input type= "text" name = "quantidade" value="{{produto.quantidade}}"><br>
+        <input type= "submit" value = "ATUALIZAR"><br>
+        </form>
+</body>
+</html>

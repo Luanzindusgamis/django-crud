@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <hr>
+    <form action="{% url 'save' %}" method = "post">
+        {% csrf_token %}
+        <label for=""> Descrição</label>
+        <input type ="text" name= "descricao"><br> 
+        <label for = ""> Preço</label>
+        <input type= "text" name = "preco"><br>
+            <label for=""> Quantidade</label>
+            <input type= "text" name = "quantidade"><br>
+                <input type= "submit" value = "CADASTRAR"><br>
+                </form>
+
+
+    </form>
+</body>
+</html>
